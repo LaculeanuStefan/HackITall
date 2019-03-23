@@ -1,7 +1,7 @@
 <?php
-$option = array(0, 0, 0, 0, 0)
+$option = array(0, 0, 0, 0, 0);
 
-function IncrementPoints($id_emotion) {
+function incrementPoints($id_emotion) {
     if($id_emotion == 1){
         $option[0]++;
     } elseif($id_emotion == 2){

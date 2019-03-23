@@ -1,4 +1,4 @@
-<?php include "points.php" ?>
+<?php include "points.php"; ?>
 
 <?
 $max = -1;
@@ -8,15 +8,15 @@ $whatToEat = "Nimic ca ejti gras!";
 
 function WhatToEat() {
     for($i = 0; $i < 5; $i++) {
-        if($option[i] > $max) {
-            $max =$option[i];
+        if($max < $option[i]) {
+            $max = $option[i];
             $index = $i;
         }
     }
     
     switch($index) {
         case 0:
-            $whatToEat = "fructe";
+            $whatToEat = "Fructe";
             break;
         case 1:
             $whatToEat = "Legume";
