@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php 
-function authenticationVerification() {
+function AuthenticationVerification() {
     if(isset($_SESSION['username'])) {
         return true;
     }
