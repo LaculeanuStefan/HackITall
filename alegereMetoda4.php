@@ -1,3 +1,7 @@
+<?php include "Includes/header.php"; ?>
+<?php include "Includes/styleHeaderLocker.php"; ?>
+<?php include "MySQL/db.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +10,20 @@
 </head>
 <body>
 
+<div class="overlay"></div>
+
 <div id="container">    
-	<h1>Ati ales metoda de setare a unei parole personalizate!</h1>
+	<div class="center6">
+        <h1><font color = "white" style="font-size:30px;">Ati ales metoda de setare a unei parole personalizate!</font></h1>
+    </div>
     <form action = "alegereMetoda4.php" method="post">
-         Introduceti parola personalizata: <br>
-        <input type="text" name="parola"><br>
+        <font color = "white">Introduceti parola personalizata: </font><br>
+        <input style="width: 230px" type="text" name="parola"><br>
         <br/>
-        <button name="ok">ok</button>
+        <button style="width: 230px" class="btn-primary" name="ok">ok</button>
         <br/>
         <br/>
-        <button name="back">back</button>
+        <button style="width: 230px" class="btn-primary" name="back">back</button>
     </form>
     <br/>
 </div>
@@ -34,7 +42,7 @@
         if($flag == 0) {
             echo $usernameText;
         } else {
-            echo 'Parola ta este: ' . $_POST['parola'];
+            echo '<font color = "white">Parola ta este: ' . $_POST['parola'] . '</font>';
         }
     }
 

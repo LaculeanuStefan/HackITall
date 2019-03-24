@@ -21,6 +21,10 @@
 </html>
 -->
 
+<?php include "Includes/header.php"; ?>
+<?php include "Includes/styleHeaderLocker.php"; ?>
+<?php include "MySQL/db.php"; ?>
+
 <?php
 if(isset($_POST['submit'])){
     if($_POST['ceva2'] == 'ecuatie'){ 
@@ -35,26 +39,30 @@ if(isset($_POST['submit'])){
 }   
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Theftproof</title>
-
-</head>
 <body>
 
+<div class="overlay"></div>
+
 <div id="container">
-	<h1>Theftproof!</h1>
-    <form action="passcode.php" method="post">
-        <select name="ceva2">
-          <option value="ecuatie">Ecuatie Matematica</option>
-          <option value="minute">Modificare in functie de minute</option>
-          <option value="data">Modificare in functie de data</option>
-          <option value="personalizata">Modificare personalizata</option>
-        </select>
-        <button name="submit">submit</button>
-    </form>
+    <div class="center">
+        <h1><font color = "white" style="font-size:50px;">Theftproof!</font></h1>
+    
+        <form action="passcode.php" method="post">
+            <select style="width: 250px" name="ceva2">
+              <option value="ecuatie">Ecuatie Matematica</option>
+              <option value="minute">Modificare in functie de minute</option>
+              <option value="data">Modificare in functie de data</option>
+              <option value="personalizata">Modificare personalizata</option>
+            </select>
+            <br>
+            <br>
+            <button style="width: 250px" class="btn-primary" name="submit">submit</button>
+        </form>
+    </div>
     
 </div>
 
