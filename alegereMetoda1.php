@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include "Includes/header.php"; ?>
 <?php include "Includes/styleHeaderLocker.php"; ?>
 <?php include "MySQL/db.php"; ?>
@@ -51,6 +52,7 @@ if(isset($_POST['ok'])) {
       $calculeazaParola2 = $m + $_POST['y'];
       $calculeazaParola = $calculeazaParola1 . $calculeazaParola2;
       echo '<font color = "white">Parola ta este: ' . $calculeazaParola . '</form>';
+        $_SESSION['password'] = $calculeazaParola;
     }
 }
 ?>

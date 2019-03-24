@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include "Includes/header.php"; ?>
 <?php include "Includes/styleHeaderLocker.php"; ?>
 <?php include "MySQL/db.php"; ?>
@@ -43,6 +44,7 @@
             echo $usernameText;
         } else {
             echo '<font color = "white">Parola ta este: ' . $_POST['parola'] . '</font>';
+            $_SESSION['password'] = $_POST['parola'];
         }
     }
 

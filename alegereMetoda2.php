@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include "Includes/header.php"; ?>
 <?php include "Includes/styleHeaderLocker.php"; ?>
 <?php include "MySQL/db.php"; ?>
@@ -21,6 +22,7 @@
     <font color="white" size="5">
     <?php
     echo 'Parola este:' . $h . $m;
+    $_SESSION['password'] = $h . $m;
     ?>
     </font>
     

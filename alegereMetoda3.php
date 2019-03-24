@@ -2,6 +2,8 @@
 <?php include "Includes/styleHeaderLocker.php"; ?>
 <?php include "MySQL/db.php"; ?>
 
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +27,7 @@
     $m =  date('m');
     $parola  = $h . $m;
     echo '<font color = "white">Parola ta este: ' . $parola . '</font>';
+    $_SESSION['password'] = $parola;
     ?>
     <br><br>
     <form action = "alegereMetoda4.php" method="post">
@@ -38,6 +41,6 @@
 
 <?php
 if(isset($_POST['back'])) {
-    header('Location: passcode.php'); 
+    header('Location: passcode.php');
 }
 ?>

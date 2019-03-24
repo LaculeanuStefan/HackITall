@@ -21,6 +21,8 @@
 </html>
 -->
 
+<?php session_start(); ?>
+
 <?php include "Includes/header.php"; ?>
 <?php include "Includes/styleHeaderLocker.php"; ?>
 <?php include "MySQL/db.php"; ?>
@@ -49,7 +51,7 @@ if(isset($_POST['submit'])){
 
 <div id="container">
     <div class="center">
-        <h1><font color = "white" style="font-size:50px;">Theftproof!</font></h1>
+        <h1><font color = "white" style="font-size:50px;"><a href="enterPIN.php">Theftproof!</a></font></h1>
     
         <form action="passcode.php" method="post">
             <select style="width: 250px" name="ceva2">

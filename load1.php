@@ -6,7 +6,7 @@
     function()  
     {  
     $('#content').load('alegereMetoda2.php');  
-    }, 36000);  
+    }, 5000);  
 </script>  
 <style>  
 #content{  
