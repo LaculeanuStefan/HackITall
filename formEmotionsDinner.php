@@ -33,7 +33,7 @@ if(isset($_POST['submit'])) {
    
     <div class="overlay"></div>
     
-    <form method="post" action="formEmotions.php">
+    <form method="post" action="formEmotionsDinner.php">
         <div class="optionBox"> 
             <div class="options">
                 <h4 style="color: #8B0000">
